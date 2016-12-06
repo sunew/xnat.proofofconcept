@@ -26,4 +26,12 @@
     layer="xnat.proofofconcept.interfaces.IXnatProofofconceptLayer"
   />
 
+  <browser:page
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    name="xnat-upload"
+    class=".xnatviews.XnatView"
+    permission="zope2.View"
+    layer="xnat.proofofconcept.interfaces.IXnatProofofconceptLayer"
+  />
+
 </configure>

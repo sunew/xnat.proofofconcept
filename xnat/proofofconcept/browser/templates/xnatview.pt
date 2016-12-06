@@ -1,0 +1,65 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master">
+<head>
+    <metal:noborder fill-slot="top_slot"
+                 tal:define="dummy python:request.set('disable_border',1);
+                            disable_column_one python:request.set('disable_plone.leftcolumn',1);
+                            disable_column_two python:request.set('disable_plone.rightcolumn',1);"/>
+</head>
+<body>
+
+
+<metal:main fill-slot="main">
+        <!-- header, H1 with title in it -->
+        <metal:header define-macro="header">
+
+        </metal:header>
+
+        <!-- body macro where all the fields are -->
+        <metal:body define-macro="body">
+           xnat test
+
+
+           <p><a href="" target="_blank"
+                 tal:attributes="href view/xnat_base_url">Click here to go to XNAT.
+           </a></p>
+
+<!--     <form action="."
+          tal:attributes="action request/URL;"
+          method="post"
+          class="edit-form enableUnloadProtection"
+          enctype="multipart/form-data"
+          name="xnatview"
+          id="xnatview">
+
+      <input type="hidden" name="submitted" value="1" />
+
+      <div id="actionsView" class="formControls">
+        <span class="actionButtons">
+          <input class="context"
+                 type="submit"
+                 name="uploadxnat"
+                 value="Upload images in XNAT"
+                 />
+          </span>
+      </div>
+
+      <input tal:replace="structure context/@@authenticator/authenticator" />
+
+    </form>
+ -->
+        </metal:body>
+
+
+        <!-- footer, by line created date etc. -->
+        <metal:footer define-macro="footer">
+
+        </metal:footer>
+
+</metal:main>
+</body>
+</html>
