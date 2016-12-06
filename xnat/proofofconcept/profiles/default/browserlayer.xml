@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+    name="xnat.proofofconcept"
+    interface="xnat.proofofconcept.interfaces.IXnatProofofconceptLayer"
+  />
+</layers>
